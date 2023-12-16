@@ -2,12 +2,11 @@ package com.example;
 
 //подмножество работников магазина
 public class Worker extends Human {
-    public String surname;
     public String dolzhnost;
 
-    Worker(String dolzhnost){
+    Worker(String dolzhnost, String surname) {
         this.dolzhnost = dolzhnost;
-        this.surname = fullname.split(" ")[0]; //разделяем строку с фамилией и именем и для получения фамилии берем первый элемент массива
+        this.surname = surname;
     }
 
     @Override
@@ -15,5 +14,4 @@ public class Worker extends Human {
         System.out.println("Фамилия: "+this.surname
                 +"\nДолжность:"+this.dolzhnost);
     }
-
 }
